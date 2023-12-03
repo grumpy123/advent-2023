@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from day01.day01 import recover, recover_crc, recover2, recover_crc2
+from day01 import recover, recover_crc, recover2, recover_crc2
 
 
 def test_recover():
@@ -31,12 +31,12 @@ def test_recover2():
 
 
 def test_recover_for_real():
-    with open('test/day01/input.txt') as data_file:
+    with open('test/day01.in') as data_file:
         scrambled_text = data_file.read()
     assert recover_crc(scrambled_text) == 53334
 
 
 def test_recover_for_real2():
-    with open('test/day01/input.txt') as data_file:
+    with open('test/day01.in') as data_file:
         scrambled_text = data_file.read()
     assert recover_crc2(scrambled_text) == 52834

@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from day02.day02 import parse_games, are_possible, Game, Balls, possible_sum, total_power
+from day02 import parse_games, are_possible, Game, Balls, possible_sum, total_power
 
 
 def test_game_parse():
@@ -38,7 +38,7 @@ def test_possible_sum():
 
 
 def test_possible_sum_for_real():
-    with open('test/day02/input.txt') as data_file:
+    with open('test/day02.in') as data_file:
         games = parse_games(data_file.read())
     balls = Balls(12, 13, 14)
     assert possible_sum(games, balls) == 2285
@@ -58,6 +58,6 @@ def test_min_set_and_power():
 
 
 def test_power_for_real():
-    with open('test/day02/input.txt') as data_file:
+    with open('test/day02.in') as data_file:
         games = parse_games(data_file.read())
     assert total_power(games) == 77021
