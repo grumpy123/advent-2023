@@ -83,4 +83,4 @@ def test_gears():
 def test_solution2_for_real():
     with open('test/day03.in') as data_file:
         schema = Schema.parse(data_file.read())
-    assert schema.gear_ratios() == 0
+    assert schema.gear_ratios() == 76504829
